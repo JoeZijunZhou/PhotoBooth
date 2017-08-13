@@ -1,5 +1,5 @@
 # PhotoBooth
-Photo Booth Web Application
+Photo Booth Web Application - Author: Zijun Zhou
 
 • Followed MVC pattern to develop a RESTful cross-platform
 web app that supports photo uploading, photo tagging, image
