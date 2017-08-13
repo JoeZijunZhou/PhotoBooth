@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Photo Booth</title>
+        <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
+        <link rel="stylesheet" type="text/css" href="allfeature1.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <div class= "header" style="clear: both">
+        <img id="title" src="photobooth/photoboothLogo.png" style="float: left" />
+        <!-- <h1  style="float: right"></h1> -->
+    </div>
+
+    <body onload="display_img();display_tag();">
+      <div id="main">
+      <div id="content">
+
+
+
+
+        <div class="image-container">
+            <!--<img id="theImage"/>-->
+        </div>
+      </div>
+
+
+        <div id="sidebar">
+          <div class="row" id="row1">
+          <input type="checkbox" class="state" id="upload"/>
+            <label for="upload" class="trigger"><img id="plus" src="photobooth/uploadIcon-01.png">upload</label>
+            <div class="wrap">
+              <div class="target">
+                <input type="file" id="fileSelector" class="inputfile">
+                <!-- <input type="file" id="choose" class="inputfile"> -->
+                <button id="uploadButton" onclick="readFile(); uploadFile();">upload</button>
+              </div>
+            </div>
+          </div>
+          <!-- <br> -->
+
+          <div class="row" id="row2">
+            <input type="checkbox" class="state" id="filter" />
+              <label for="filter" class="trigger"><img id="search" src="photobooth/filterIcon-01.png">filter</label>
+              <div class="wrap">
+                <div class="target">
+                  <input type="text" id="tagFilter">
+                  <!-- <br> -->
+                  <button id="enterButton" onclick="filterLabels()">enter</button> &emsp;&emsp;
+                  <button id="clearButton" onclick="clearFilter()">clear filter</button>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="row" id="row3">
+            <input type="checkbox" class="state" id="fav" />
+            <label for="fav" class="trigger" ><img src="photobooth/favoritesIcon.png">favorites</label>
+            <div class="wrap">
+              <div class="target">
+                <button id="favButton" onclick="favFilter()">Favorite  Pic</button>
+                <button id="clearButton2" onclick="clearFilter2()">clear  filter</button>
+              </div>
+            </div>
+          </div>
+
+      </div>
+        <script src="allfeature.js"></script>
+        <script src="tagfeature.js"></script>
+    </body>
+</html>

@@ -1,0 +1,418 @@
+@font-face {
+  font-family: MyWebFont;
+  src: url('./photobooth/fontGoudy/GoudyStd-Bold.otf'); /* IE9 Compat Modes */
+
+}
+
+body {
+    font-family: MyWebFont;
+    display: flex;
+    min-height: 100vh;  /* need this line to tell body to fill viewport */
+    flex-direction: column;
+    font-size: large;
+    align-items: center;
+}
+h1{
+  margin-top: 230px;
+  font-size: 54pt;
+  color: #885541;
+}
+#enter{
+  background: #885541;
+  font-size: 34pt;
+  color: white;
+  border-color: black;
+  padding: 5px 40px 5px 40px;
+}
+
+.header {
+    border-bottom: 2px solid #885541;
+    width: 95%;
+}
+
+#title {
+  padding-top: 50px;
+  padding-left: 50px;
+  /*padding-right: 700px;*/
+  margin-bottom: 20px;
+
+}
+
+#fileSelector{
+  font-family: MyWebFont;
+  margin-top: 10px;
+  margin-left: 15px;
+  /*background: #885541;*/
+  /*font-size: 14pt;*/
+  width: 80%;
+  color: white;
+  font-size: 14pt;
+}
+#main {
+  padding-top: -2px;
+  width:100%;
+}
+#content {
+    float: left;
+    width: 80%;
+    min-height: 100vh;
+}
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 20%;
+  min-height: 200vh;
+  background-color: #885541;
+}
+
+
+/*#theImage{
+ opacity: 0;
+ }*/
+
+.image-container{
+    display: flex;
+
+}
+
+.image-container img{
+    width: 350px;
+    height: 400px;
+}
+
+
+#uploadButton,#enterButton,#clearButton,#clearButton2,#favButton {
+  background: #885541;
+  font-size: 14pt;
+  font-family: MyWebFont;
+  color: white;
+  border-color: black;
+  padding: 5px 10px 5px 10px;
+
+}
+#uploadButton{
+  margin-top:15px;
+  margin-left:15px;
+  margin-bottom:10px;
+}
+#enterButton,#clearButton,#clearButton2, #favButton{
+  margin-top:15px;
+  margin-left:15px;
+  margin-bottom:20px;
+}
+#tagFilter {
+  font-family: MyWebFont;
+  background: white;
+  font-size: 16pt;
+  color: #885541;
+  border-color: #885541;
+  padding: 10px;
+  margin-top:15px;
+  margin-left:15px;
+  margin-bottom:15px;
+  width: 80%;
+}
+
+/*input[type="file"] {
+    display: none;
+}*/
+.inputfile::-webkit-file-upload-button {
+ visibility: hidden;
+}
+
+.inputfile::before {
+ content: 'choose file...';
+ display: inline-block;
+ background: #885541;
+   color: white;
+   border-color: black;
+   padding: 5px;
+
+}
+
+.image-container{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+.blockClass{
+  display: block;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+
+
+
+.state {
+  display: none;
+}
+
+.target {
+  display: none;
+  width: 100%;
+  font-size: 0;
+  transition: .25s ease;
+  background: #C9B9B1;
+}
+
+.state:checked ~ .wrap .target {
+  display: block;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.state:unchecked ~ .wrap .target {
+  display: none;
+}
+
+.wrap {
+  max-width: 100%;
+}
+
+.trigger {
+  cursor: pointer;
+  display: flex;
+  color: white;
+  font-size: 1.5em;
+  line-height: 2;
+  /*border: 1px solid #ddd;*/
+  border-radius: .25em;
+  align-items: center;
+  margin: 10px;
+  /*margin-bottom: 1em;*/
+}
+
+
+.imgblockinClass .optionClass {
+  height: 5px;
+  width: 5px;
+  /*opacity: 0;*/
+  bottom: 57px;
+  left: 300px;
+  position: relative;
+  padding: 0;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.imgblockinClass .optionClass .iconclass{
+  height: 50px;
+  width: 50px;
+}
+
+.favclass .button:hover , .changetagclass .button:hover , .unfavclass .button:hover{
+  background-color: pink;
+}
+
+.favclass .button ,.changetagclass .button, .inneroptclass .button, .unfavclass .button{
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  border-color: black;
+  border: 0.5px solid black;
+  color: white;
+  /*left: 45px;
+  top: -45px;*/
+  /*float: right;*/
+}
+.favclass .button ,.changetagclass .button, .unfavclass .button{
+  background-color: #885541;
+  padding: 5px;
+  width: 120px;
+}
+.inneroptclass .button{
+  height: 50px;
+  width: 50px;
+  bottom: 55px;
+  right:2px;
+}
+.favclass .button,.changetagclass .button, .unfavclass .button{
+  bottom:54px;
+  right:70px;
+}
+
+
+/*.inneroptclass pic{
+  margin-right: 100px;
+}*/
+
+.inicon {
+  width: 100px;
+  height: 45px;
+}
+
+
+
+/*.imgblockinClass:hover .optionClass {
+  opacity: .9;
+  transition: opacity .5s;
+}*/
+
+/*.imgblockinClass:hover .optionClass {
+  opacity: .9;
+  transition: opacity .5s;
+}*/
+
+/*#imgblockin1 #option1 {
+  height: 5px;
+  width: 5px;
+  opacity: 0;
+  bottom: 54px;
+  left: 300px;
+  position: relative;
+  padding: 0;
+  transition: opacity .5s;
+}
+#imgblockin1 #option1 img{
+  height: 50px;
+  width: 50px;
+}
+#imgblockin1:hover #option1 {
+  opacity: .9;
+  transition: opacity .5s;
+}*/
+
+.tagblockbelowClass{
+  display: none;
+  width: 350px;
+}
+
+.tagSelector{
+  font-family: MyWebFont;
+  border: 1px solid;
+  border-color: #885541;
+  width: 330px;
+  font-size: 14pt;
+  padding: 5px 10px 5px 10px;
+}
+.addButton{
+  font-family: MyWebFont;
+  display: block;
+  background: #885541;
+  font-size: 14pt;
+  color: white;
+  border-color: black;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.tagblockoutClass{
+  border: 1px solid;
+  border-color: #885541;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+}
+.tagbox{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px;
+  flex-direction: row;
+}
+
+.deleteButton{
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+p{
+  margin: 1px 0px 0px 3px ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  body{
+    max-width: 100%;
+  }
+  #sidebar{
+    /*display: table;*/
+    background-color: white;
+    display:table-header-group;
+    float: none;
+  }
+  #content{
+    display: table-footer-group;
+    float: none;
+  }
+  .row {
+    display: table-cell;
+    width: 10%;
+  }
+  #plus{
+    margin-left: 115%;
+  }
+  #fileSelector{
+    color: black;
+  }
+  #main{
+    display: table;
+  }
+  .target{
+    background: white;
+    margin-top: -25%;
+  }
+  #row1 .target{
+    margin-left: 60%;
+    margin-top: 10px;
+    position: inherit;
+  }
+  #uploadButton{
+    margin-top: 6px;
+    margin-left: 20px;
+    padding: 0;
+    font-size: 10pt;
+  }
+  #search{
+    margin-bottom: -3px;
+margin-left: 48px;
+  }
+  #tagFilter{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 10pt;
+    padding: 2px;
+  }
+  #enterButton, #clearButton, #clearButton2, #favButton {
+    margin-top: 15px;
+    /* margin-left: 15px; */
+    /* margin-bottom: 20px; */
+    padding: 0;
+    font-size: 10pt;
+}
+.image-container{
+  margin-left: 60%;
+}
+#title {
+    padding-top: 50px;
+    padding-left: 35px;
+    /* padding-right: 700px; */
+    margin-bottom: 20px;
+}
+.header {
+    border-bottom: none;
+    width: 100%;
+}
+
+
+
+
+}
